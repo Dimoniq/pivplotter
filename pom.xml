@@ -8,6 +8,12 @@
 	<name>PiVPlotter</name>
 	<description>V-Plotter mit Raspberry Pi</description>
 
+
+<properties>
+     <maven.compiler.source>17</maven.compiler.source>
+     <maven.compiler.target>17</maven.compiler.target>
+</properties>
+
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/com.pi4j/pi4j-gpio-extension -->
 		<dependency>
