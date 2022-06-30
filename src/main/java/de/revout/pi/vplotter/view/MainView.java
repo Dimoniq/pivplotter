@@ -94,7 +94,7 @@ public class MainView extends JFrame {
 		page0 = new HomePage();
 		page0.setBackground(new Color(162,182,210));
 		
-		//Filter wählen
+		//Filter waehlen
 		page1 = new FilterPanel(this);
 		page1.setBackground(new Color(162,182,210));
 		
@@ -171,7 +171,7 @@ public class MainView extends JFrame {
 		plotter.setMnemonic(Dictionary.getCurrent().getString("MainView.Mnemonic.Plotter").charAt(0)); //$NON-NLS-1$
 		bar.add(plotter);
 
-		// Mainview neu malen, wenn Menü ausgewählt wurde
+		// Mainview neu malen, wenn Menue ausgewaehlt wurde
 		file.addChangeListener(new ChangeListener() {
 			@Override
 			public void stateChanged(ChangeEvent e) {
@@ -252,7 +252,7 @@ public class MainView extends JFrame {
 		});
 		file.add(newProcess);
 
-		// Load File Menü
+		// Load File Menue
 		loadFile = new JMenuItem(Dictionary.getCurrent().getString("MainView.LoadFile")); //$NON-NLS-1$
 		loadFile.setMnemonic(Dictionary.getCurrent().getString("MainView.Mnemonic.LoadFile").charAt(0)); //$NON-NLS-1$
 		loadFile.addActionListener(new ActionListener() {
@@ -263,7 +263,7 @@ public class MainView extends JFrame {
 		});
 		file.add(loadFile);
 
-		// Recent Used Files Menü
+		// Recent Used Files Menue
 		recentFiles = new JMenu(Dictionary.getCurrent().getString("MainView.RecentUsed")); //$NON-NLS-1$
 		recentFiles.setMnemonic(Dictionary.getCurrent().getString("MainView.MnemonicRecentUsed").charAt(0)); //$NON-NLS-1$
 		recentFiles.addChangeListener(new ChangeListener() {
@@ -276,7 +276,7 @@ public class MainView extends JFrame {
 
 		loadRecent();
 		
-		// Exit Menü
+		// Exit Menue
 		JMenuItem exit = new JMenuItem(Dictionary.getCurrent().getString("MainView.EXIT")); //$NON-NLS-1$
 		exit.setMnemonic(Dictionary.getCurrent().getString("MainView.Mnemonic.Exit").charAt(0)); //$NON-NLS-1$
 		exit.addActionListener(new ActionListener() {
@@ -286,7 +286,7 @@ public class MainView extends JFrame {
 		});
 		file.add(exit);
 
-		// LoadConfig Menü
+		// LoadConfig Menue
 		JMenuItem loadConfig = new JMenuItem(Dictionary.getCurrent().getString("MainView.LOAD")); //$NON-NLS-1$
 		loadConfig.setMnemonic(Dictionary.getCurrent().getString("MainView.Mnemonic.LoadConfig").charAt(0)); //$NON-NLS-1$
 		loadConfig.addActionListener(new ActionListener() {
@@ -314,7 +314,7 @@ public class MainView extends JFrame {
 		});
 		config.add(loadConfig);
 
-		// NewConfig Menü
+		// NewConfig Menue
 		JMenuItem newConfig = new JMenuItem(Dictionary.getCurrent().getString("MainView.NEW")); //$NON-NLS-1$
 		newConfig.setMnemonic(Dictionary.getCurrent().getString("MainView.Mnemonic.NewConfig").charAt(0)); //$NON-NLS-1$
 		newConfig.addActionListener(new ActionListener() {
@@ -344,7 +344,7 @@ public class MainView extends JFrame {
 		});
 		config.add(newConfig);
 
-		// EditConfig Menü
+		// EditConfig Menue
 		JMenuItem editConfig = new JMenuItem(Dictionary.getCurrent().getString("MainView.EDIT")); //$NON-NLS-1$
 		editConfig.setMnemonic(Dictionary.getCurrent().getString("MainView.Mnemonic.EditConfig").charAt(0)); //$NON-NLS-1$
 		editConfig.addActionListener(new ActionListener() {

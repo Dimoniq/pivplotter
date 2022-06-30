@@ -53,9 +53,10 @@ public class FilterBox extends JPanel {
 		// Remove button creation
 		ImageIcon icon = null;
 		try {
-			icon = new ImageIcon(ImageIO.read(FilterBox.class.getResourceAsStream("close2.png")));
-		} catch (IOException e1) {
-			
+			String pathToImage = "de/revout/pi/vplotter/resources/img/close.png";
+			icon = new ImageIcon(getClass().getClassLoader().getResource(pathToImage));
+		} catch (Exception e1) {
+			System.out.println("Close icon could not be loaded");
 		}
 		JButton remove = new JButton(icon);
 		remove.setBackground(Color.white);

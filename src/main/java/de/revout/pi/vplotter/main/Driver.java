@@ -302,7 +302,7 @@ public class Driver {
 		return Double.max(paramWidth / plotterSide[0], paramHeight / plotterSide[1]);
 	}
 
-	// Servo bewegen, um den Malstatus zu ändern
+	// Servo bewegen, um den Malstatus zu aendern
 	private void draw(int paramDrawState) {
 		if(isReady()) {
 			try {
@@ -337,7 +337,7 @@ public class Driver {
 	}
 
 
-	// Prüfen, ob der Punkt noch innerhalb des Maximalen der Motoren ist
+	// Pruefen, ob der Punkt noch innerhalb des Maximalen der Motoren ist
 	private boolean isInRange(Pair paramPoint) {
 		if (paramPoint.getX() < (minX-RANGE) || paramPoint.getX() > (maxX+RANGE) || paramPoint.getY() < (minY-RANGE)
 				|| paramPoint.getY() > (maxY+RANGE)) {
@@ -346,7 +346,7 @@ public class Driver {
 		return true;
 	}
 
-	// Benötigte veränderung berechnen, um von einem Punkt zu einem andere Punkt zu
+	// Benoetigte veraenderung berechnen, um von einem Punkt zu einem andere Punkt zu
 	// bewegen
 	private Pair getDifferences(Pair paramCurrentPoint, Pair paramToPoint) {
 		double lengthDifferenceLeft = getLenght(motorLinks, paramToPoint) - getLenght(motorLinks, paramCurrentPoint);
@@ -354,7 +354,7 @@ public class Driver {
 		return new Pair(lengthDifferenceLeft, lengthDifferenceRight);
 	}
 
-	// Länge zwischen zwei Punkten berechnen
+	// Laenge zwischen zwei Punkten berechnen
 	private double getLenght(Pair currentPoint, Pair toPoint) {
 		return Math.sqrt(Math.pow((toPoint.getY() - currentPoint.getY()), 2)
 				+ Math.pow(toPoint.getX() - currentPoint.getX(), 2));
@@ -362,7 +362,7 @@ public class Driver {
 
 	/**
 	 * @param paramPair
-	 * @return Liefert die tatsächliche Änderung der Seilen (links und rechts)
+	 * @return Liefert die tatsaechliche aenderung der Seilen (links und rechts)
 	 */
 	private Pair move(Pair paramPair) {
 		
@@ -417,7 +417,7 @@ public class Driver {
 		return result;
 	}
 
-	// Schritte berechnen, die für eine Strecke notwendig sind
+	// Schritte berechnen, die fuer eine Strecke notwendig sind
 	private int getSteps(double paramDifference) {
 		return new BigDecimal(Math.abs(paramDifference * stepsPerMM)).setScale(0, RoundingMode.HALF_UP).intValue();
 	}
@@ -436,7 +436,7 @@ public class Driver {
 
 	}
 
-	// Koordinaten für Abschnittspunkt bestimmen
+	// Koordinaten fuer Abschnittspunkt bestimmen
 	private Pair calculatePoint(double path, Pair paramCurrentPoint, Pair paramToPoint) {
 		double C = getLenght(paramCurrentPoint, paramToPoint);
 		if (C == 0) {

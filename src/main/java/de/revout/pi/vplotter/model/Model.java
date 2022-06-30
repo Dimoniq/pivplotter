@@ -70,7 +70,7 @@ public class Model {
 	 * 
 	 * @param startPoint
 	 * @param endPoint
-	 * @return länge der entfernung
+	 * @return laenge der entfernung
 	 */
 	public double getLenght(Pair startPoint, Pair endPoint) {
 		return Math.sqrt(Math.pow(startPoint.getX() - endPoint.getX(), 2) + Math.pow(startPoint.getY() - endPoint.getY(), 2));
@@ -80,7 +80,7 @@ public class Model {
 	 * 
 	 * @param lastPoint
 	 * @param list
-	 * @return Section die als nächster drann ist
+	 * @return Section die als naechster drann ist
 	 */
 	public Section getNextSection(Pair lastPoint, List<Section> list) {
 		Section section = list.get(0);
