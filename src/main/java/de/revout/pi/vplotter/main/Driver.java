@@ -308,11 +308,11 @@ public class Driver {
 			try {
 				if (paramDrawState == 0) {
 					currentPause = stepPauseSlack;
-					Gpio.pwmWrite(servoPin, penaway);
+					graduallySwitchServoPin(pendraw, penaway, 200);
 					pause(drawPause);
 				} else {
 					currentPause = stepPauseDraw;
-					Gpio.pwmWrite(servoPin, pendraw);
+					graduallySwitchServoPin(penaway, pendraw, 2000);
 					pause(drawPause);
 				}
 			} catch (Exception exc) {
@@ -322,7 +322,21 @@ public class Driver {
 
 		lastDraw = paramDrawState;
 	}
-	
+
+	private void graduallySwitchServoPin(int sourcePosition, int targetPosition, int overallDurationMlis) {
+		if(sourcePosition == targetPosition ) return;
+
+		var steps = Math.abs(sourcePosition - targetPosition);
+		var pausePerStepMicros = overallDurationMlis * 1000 / steps;
+
+		var stepDifference = sourcePosition > targetPosition ? -1 : 1;
+		for (int intermediatePosition = sourcePosition; intermediatePosition != targetPosition ; intermediatePosition+=stepDifference) {
+			Gpio.pwmWrite(servoPin, intermediatePosition);
+			pause(pausePerStepMicros);
+		}
+		Gpio.pwmWrite(servoPin, targetPosition);
+	}
+
 	public void showPageLocation() {
 		List<String> testData = new ArrayList<>();
 		loadProperty();
