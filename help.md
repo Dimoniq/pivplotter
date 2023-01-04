@@ -14,3 +14,4 @@ sudo apt install potrace
 sudo java -jar target/PiVPlotter.jar
 
 xhost +
+
