@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<entry key="spacebetween">1900</entry>
+<entry key="sectorlength">0.4</entry>
+<entry key="stepspermm">230.4278074866310160427807486631</entry>
+
+<entry key="steppausedraw">400</entry>
+<entry key="steppauseslack">200</entry>
+<entry key="drawpause">200000</entry>
+
+<entry key="plotterheight">270</entry>
+<entry key="plotterwidth">190</entry>
+
+<entry key="startpointy">800</entry>
+<entry key="startpointx">950</entry>
+
+<entry key="minx">850</entry>
+<entry key="miny">495</entry>
+
+<entry key="paperwidth">210</entry>
+<entry key="paperheight">297</entry>
+
+</properties>
