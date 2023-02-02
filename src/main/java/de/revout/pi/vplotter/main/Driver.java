@@ -308,7 +308,7 @@ public class Driver {
 			try {
 				if (paramDrawState == 0) {
 					currentPause = stepPauseSlack;
-					graduallySwitchServoPin(pendraw, penaway, 200);
+					graduallySwitchServoPin(pendraw, penaway, 1000);
 					pause(drawPause);
 				} else {
 					currentPause = stepPauseDraw;
